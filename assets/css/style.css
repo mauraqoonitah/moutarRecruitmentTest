@@ -116,6 +116,20 @@ hr {
     padding: 8px 16px;
 }
 
+img.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.btn-contact {
+    background-color: #ebebeb;
+}
+
+.btn-contact:hover {
+    background-color: lightgray;
+}
+
 footer {
     background-color: black;
     color: white;
@@ -124,12 +138,24 @@ footer {
     margin-top: 2rem;
 }
 
-.about-menu {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(4, 1fr));
-    align-items: left;
-    justify-content: left;
-    gap: 1.2rem;
+@media screen and (max-width: 768px) {
+    .about-menu {
+        display: flex;
+        justify-content: center;
+    }
+    .about-content {
+        margin-bottom: 3rem;
+        border: 1px solid lightgray;
+        padding: 0;
+    }
 }
 
-.about-list {}
+@media screen and (max-width: 991px) {
+    .about-menu {
+        display: flex;
+        justify-content: center;
+    }
+    .about-content {
+        margin-bottom: 3rem;
+    }
+}
