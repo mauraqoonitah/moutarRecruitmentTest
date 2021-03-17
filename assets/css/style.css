@@ -130,12 +130,20 @@ img.card-img-top {
     background-color: lightgray;
 }
 
+#map {
+    height: 600px;
+    width: 100%;
+}
+
 footer {
     background-color: black;
     color: white;
     height: 7vh;
     text-align: center;
     margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
