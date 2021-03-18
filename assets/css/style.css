@@ -32,7 +32,8 @@ h6,
 }
 
 section {
-    margin-bottom: 5rem;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
 }
 
 p {
@@ -45,7 +46,7 @@ hr {
 
 .navbar {
     padding: 10px 20px 10px 20px;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
 }
 
 .nav-link {
@@ -58,6 +59,11 @@ hr {
 
 .navbar-light .navbar-nav .nav-link {
     color: black;
+    letter-spacing: 4px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgb(188, 120, 30);
 }
 
 .jumbotron {
@@ -67,10 +73,13 @@ hr {
     display: flex;
     align-items: center;
     text-align: center;
+    margin-top: 4rem;
 }
 
 .display-7 {
     font-size: var(--larger-font-size);
+    letter-spacing: 2px;
+    text-shadow: 2px 2px black;
 }
 
 .logo {
