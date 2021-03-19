@@ -195,12 +195,12 @@ p {
     color: var(--first-color-dark);
     font-size: 1.3rem;
     cursor: pointer;
-    padding-right: .5rem;
+    padding-right: 1rem;
 }
 
 .nav__logo {
     color: var(--first-color-dark);
-    font-family: var(--body-font-new);
+    font-family: 'Rubik', sans-serif;
     font-size: 1.3rem;
     display: inline;
 }
@@ -376,6 +376,30 @@ img.about-card-img {
 }
 
 
+/* contact section */
+
+.contact-sub-title {
+    font-size: var(--large-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.contact-form {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: .2rem;
+    margin-bottom: .5rem;
+    font-size: 1rem;
+    background-color: white;
+    padding: 12px 20px 12px 12px;
+}
+
+.contact-form:focus {
+    border: 1px solid rgb(199, 197, 197);
+    border-radius: .2rem;
+}
+
+
 /* buttons */
 
 .btn-contact {
@@ -386,10 +410,30 @@ img.about-card-img {
     width: 100%;
     border: 1px solid #ebebeb;
     font-size: .9rem;
+    border-radius: .3rem;
+    cursor: pointer;
 }
 
 .btn-contact:hover {
     background-color: lightgray;
+}
+
+.btn-send {
+    margin-top: 1rem;
+    color: white;
+    background-color: black;
+    padding: .6rem 1rem;
+    font-weight: var(--font-semi-bold);
+    font-size: .9rem;
+    border-radius: .3rem;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.btn-send:hover {
+    color: white;
+    background-color: rgb(79, 76, 76);
+    border: 1px solid rgb(79, 76, 76);
 }
 
 #map {
@@ -410,8 +454,9 @@ footer {
 
 @media screen and (max-width: 600px) {
     .nav__menu {
-        height: 10rem;
+        height: 12rem;
         padding: 2rem 0 2rem 0;
+        margin-top: 4rem;
     }
     .nav-ul li {
         display: block;
@@ -420,12 +465,18 @@ footer {
     .nav {
         padding: 0px;
     }
+    i.material-icons.close {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 768px) {
     .navbar-nav .nav-link {
-        padding: 12px 0px;
+        padding: 10px 0px;
         font-size: 1.1rem;
+    }
+    .nav__link {
+        font-size: 14px;
     }
     p {
         font-size: 1rem;
@@ -454,11 +505,13 @@ footer {
         margin: 0 auto;
         width: 90%;
     }
-}
-
-@media screen and (min-width: 375px) and (max-width:767px) {
-    .project-list-title {
-        left: 19px;
+    .nav__logo {
+        font-size: 1rem;
+    }
+    .logo-light {
+        font-size: 1rem;
+        margin-right: 8px;
+        margin-left: 1.5rem;
     }
 }
 
@@ -505,4 +558,9 @@ footer {
     .l-header {
         position: absolute;
     }
+}
+
+
+}
+
 }
