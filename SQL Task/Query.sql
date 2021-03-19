@@ -2,13 +2,12 @@
 -- TASK 1: Query to get best seller product for male and female.
 --
 
--- OPSI 1
-
 SELECT
     product.categoryID,
     product.productID,
     product.productName,
     SUM(TRANSACTION.qty) AS TotalQty
+
 FROM
     product
 LEFT JOIN TRANSACTION ON product.productID = TRANSACTION.productID
@@ -18,21 +17,25 @@ ORDER BY
     SUM(TRANSACTION.qty)
 DESC
 
--- OPSI 2
+-- best seller product FOR MALE
 
 SELECT
     product.categoryID,
     product.productID,
     product.productName,
     SUM(TRANSACTION.qty) AS TotalQty
-FROM TRANSACTION
-INNER JOIN product USING(productID)
+FROM
+    product
+LEFT JOIN TRANSACTION ON product.productID = TRANSACTION.productID
+WHERE
+    categoryID = 'male'
 GROUP BY
-    product.productID
+    productID
 ORDER BY
-    TotalQty
+    SUM(TRANSACTION.qty)
 DESC
-    
+LIMIT 1
+
 
 --
 -- Task 2: Query to get customer that spends the most money.
